@@ -1,10 +1,18 @@
-package CrudBom;
+package CrudBom.model;
 
 public class Usuario {
 	private int id ;
 	private String nome ;
 	private String email;
-	private String municipio ;
+	private String cpf ;
+	private Municipio municipio ;
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -23,17 +31,19 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getMunicipio() {
+	
+	public Municipio getMunicipio() {
 		return municipio;
 	}
-	public void setMunicipio(String municipio) {
+	public void setMunicipio(Municipio municipio) {
 		this.municipio = municipio;
 	}
-	public Usuario(int id, String nome, String email, String municipio) {
+	public Usuario(int id, String nome, String email,String cpf, Municipio municipio) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.cpf =cpf ;
 		this.municipio = municipio;
 	}
 	public Usuario() {

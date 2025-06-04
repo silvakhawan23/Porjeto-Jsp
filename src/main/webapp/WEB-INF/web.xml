@@ -17,24 +17,52 @@
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
 
-    <servlet>
-        <servlet-name>ListaUsuarios</servlet-name>
-        <servlet-class>sefaz.ListaUsuariosServlet</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>IncluirUsuarios</servlet-name>
-        <servlet-class>sefaz.IncluirUsuariosServlet</servlet-class>
-    </servlet>
+  
+   <servlet>
+    <servlet-name>IncluirUserServlet</servlet-name>
+    <servlet-class>CrudBom.controller.IncluirUserServlet</servlet-class>
+</servlet>
     
-    <servlet-mapping>
-        <servlet-name>ListaUsuarios</servlet-name>
-        <url-pattern>/usuarios</url-pattern>
-    </servlet-mapping>
-    
-    <servlet-mapping>
-        <servlet-name>IncluirUsuarios</servlet-name>
-        <url-pattern>/usuarioIncluir</url-pattern>
-    </servlet-mapping>
 
+ <servlet>
+    <servlet-name>ListarMunicipio</servlet-name>
+    <servlet-class>CrudBom.controller.ListarMunicipiosServlets</servlet-class>
+</servlet>
+ <servlet>
+    <servlet-name>ExcluirUser</servlet-name>
+    <servlet-class>CrudBom.controller.ExcluirUserServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>EditarUser</servlet-name>
+    <servlet-class>CrudBom.controller.EditarUserServlet</servlet-class>
+</servlet>
+
+ <servlet>
+    <servlet-name>ListarUser</servlet-name>
+    <servlet-class>CrudBom.controller.ConsultaUserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ListarMunicipio</servlet-name>
+    <url-pattern>/listarMunicipios</url-pattern>
+</servlet-mapping>
+
+    <servlet-mapping>
+    <servlet-name>IncluirUserServlet</servlet-name>
+    <url-pattern>/incluirUser</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>ListarUser</servlet-name>
+    <url-pattern>/ListarUser</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>EditarUser</servlet-name>
+    <url-pattern>/editarUser</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>ExcluirUser</servlet-name>
+    <url-pattern>/excluirUser</url-pattern>
+</servlet-mapping>
 </web-app>
